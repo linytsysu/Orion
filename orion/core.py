@@ -193,6 +193,11 @@ class Orion:
         with open(path, 'wb') as pickle_file:
             pickle.dump(self, pickle_file)
 
+    def load_mlppipeline(self, path: str):
+        self._mlpipeline = self._get_mlpipeline()
+        self._mlpipeline.load(path)
+        self._fitted = True
+
     @classmethod
     def load(cls, path: str):
         """Load an Orion instance from a pickle file.

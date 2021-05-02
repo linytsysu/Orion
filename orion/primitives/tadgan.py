@@ -29,7 +29,8 @@ class TadGAN(tf.keras.Model):
         state = self.__dict__.copy()
 
         for module in modules:
-            del state[module]
+            if module in state:
+                del state[module]
 
         for network in networks:
             with tempfile.NamedTemporaryFile(suffix='.hdf5', delete=True) as fd:

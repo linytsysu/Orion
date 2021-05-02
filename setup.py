@@ -26,6 +26,7 @@ install_requires = [
     'numba>=0.48,<0.52',
     'pyts>=0.9,<0.11',
     'azure-cognitiveservices-anomalydetector>=0.3,<0.4',
+    'tensorflow==2.2.0'
     # tensorflow installation
     # 'tensorflow>=2.3,<2.4',
     # 'tensorflow-gpu>=2.3,<2.4'
